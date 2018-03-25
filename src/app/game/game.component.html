@@ -1,5 +1,15 @@
 <div class="row">
-    
+        <div class="col-md-4">
+        
+                <div class="card" >
+                    <div class="card-header">My Quotes</div>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let quote of Model.MyQuotes" class="list-group-item">
+                            {{quote}}
+                        </li>
+                    </ul>
+                  </div>
+            </div>
     <div class="col-md-8">
         <div class="card bg-success mb-3" >
             <div class="card-header text-white">Played Quotes</div>

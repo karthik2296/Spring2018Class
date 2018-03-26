@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { LoginComponent } from './login/login.component';
+import { DietComponent } from './diet/diet.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     MessagesComponent,
     HomeComponent,
     GameComponent,
-    LoginComponent
+    LoginComponent,
+    DietComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { LoginComponent } from './login/login.component';
         { path: 'home', component: HomeComponent },
         { path: 'game', component: GameComponent },
         { path: 'login', component: LoginComponent },
+       
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],

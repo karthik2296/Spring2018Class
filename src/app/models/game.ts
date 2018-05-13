@@ -21,3 +21,4 @@ export class Quote {
     PlayerId: string;
     Chosen: boolean = false;
 }
+

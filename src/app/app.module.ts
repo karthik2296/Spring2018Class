@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DietComponent } from './diet/diet.component';
 import { TryComponent } from './try/try.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -29,6 +30,7 @@ import { TryComponent } from './try/try.component';
     BmiComponent,
     DietComponent,
     TryComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

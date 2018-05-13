@@ -1,0 +1,105 @@
+<p id="explanation">Just something that I've found useful when training and the sites I've seen just don't quite hit the mark for me.</p>
+
+<div id="title">
+  <h3>Angular Calorie Calculator</h3>
+  <p>Using the <a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation" target="_blank">Harris–Benedict equation</a> as revised by Mifflin and St Jeor in 1990</p>
+</div>
+
+<div id="maincontainer" ng-app="app" ng-controller="mainController">  
+  
+  <div id="calulatorContainer">
+    <div id="resultsSection">
+      <h3>Results (in kJ)</h3>
+      <div id="results">
+        <p>Your <a href="https://en.wikipedia.org/wiki/Basal_metabolic_rate" target="_blank">BMR</a> = {{bmr () | number:0}}</p>
+        <p>Required daily cals = {{cals () | number:0 }} </p>
+        <p>Daily Protein cals = {{proteinCals () | number:0}} </p>
+        <p>Daily Carbs cals = {{carbsCals ()| number:0}}</p>
+        <p>Daily Fat cals = {{fatCals ()| number:0}}</p>
+      </div>
+      <!--closing div for results-->
+    </div>
+    <!--closing div for results section-->
+      <div class="form-group">
+      <div class="form">
+        <input type="number" class="form-control" placeholder="Weight in Kgs" ng-model="weight">
+      </div>
+      <div class="form">
+        <input type="number" class="form-control" placeholder="Age" ng-model="age">
+      </div>
+      <div class="form">
+        <input type="number" class="form-control" placeholder="Height in cm" ng-model="height">
+      </div>
+      <div>
+          <label>Activity</label>
+              <div *ngIf="bmi != null">
+                  <select ngModel="bmi.activity">
+                  <option *ngFor="let x of activity" [value]="x.id" [selected]="bmi.activity.id == x.id">{{x.name}}</option>
+                  </select>
+          </div>
+        </div>
+        <div>
+          <label>Goal</label>
+              <div *ngIf="bmi != null">
+                  <select ngModel="bmi.goal">
+                  <option *ngFor="let x of goal" [value]="x.id" [selected]="bmi.goal.id == x.id">{{x.name}}</option>
+                  </select>
+          </div>
+         </div>
+      <!--closing div for goal-->
+      <div id="gender">
+        <label class="radio-inline"><input type="radio" name="optradio" ng-model="gender" value="male">Male</label>
+        <label class="radio-inline"><input type="radio" name="optradio" ng-model="gender" value="female">Female</label>
+      </div>
+      <!--closing div for radio gender-->
+    </div>
+  </div>
+  <!--closing div for calculator container-->
+  
+  <div id="mealContainer">
+    <h3>Meal Plan (in grams)</h3>
+    <p id="explainMeals">Follow Monday to Friday, just don't take the mick at the weekends and gorge on chocolate etc <i class="fa fa-smile-o" aria-hidden="true"></i> unless you want to lose weight, then follow religiously!</p>
+    <div class="meal"><h5>Breakfast</h5>
+        <p>Protein: {{breakfast[0].value() |number:0}}</p>
+        <p>Carbs: {{breakfast[1].value()|number:0}}</p>
+        <p>Fat: {{breakfast[2].value()|number:0}}</p>
+      </div>
+    <div class="meal"><h5>Snack</h5> 
+          <p>Protein: {{snack[0].value()|number:0}}</p>
+        <p>Carbs: {{snack[1].value()|number:0}}</p>
+        <p>Fat: {{snack[2].value()|number:0}}</p>
+      </div>
+    <div class="meal"><h5>Lunch</h5>
+        <p>Protein: {{mainMeal[0].value()|number:0}}</p>
+        <p>Carbs: {{mainMeal[1].value()|number:0}}</p>
+        <p>Fat: {{mainMeal[2].value()|number:0}}</p>
+      </div>
+    <div class="meal"><h5>Snack</h5>
+        <p>Protein: {{snack[0].value()|number:0}}</p>
+        <p>Carbs: {{snack[1].value()|number:0}}</p>
+        <p>Fat: {{snack[2].value()|number:0}}</p>
+    </div>
+    <div class="meal"><h5>Snack</h5>
+        <p>Protein: {{snack[0].value()|number:0}}</p>
+        <p>Carbs: {{snack[1].value()|number:0}}</p>
+        <p>Fat: {{snack[2].value()|number:0}}</p>
+    </div>
+    <div class="meal"><h5>Dinner</h5> 
+      <p>Protein: {{mainMeal[0].value()|number:0}}</p>
+      <p>Carbs: {{mainMeal[1].value()|number:0}}</p>
+      <p>Fat: {{mainMeal[2].value()|number:0}}</p>
+    </div>
+    <div><p>incorprate meal suggestions somewhere around here?</p></div>
+  </div>
+  <!--closing div for meal container-->
+  
+  <div id="exerciseContainer">
+    some sort of exercise plan?
+  </div>
+  <!--closing div for exercise container-->
+  </div>
+<!--closing div for main container-->
+
+<div id="footer">
+  <p>do something with footer, not required but still do something</p>
+</div>

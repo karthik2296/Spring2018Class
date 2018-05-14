@@ -4,7 +4,8 @@ import { Game, User, Quote } from '../models/game';
 import { MessagesService } from '../services/messages.service';
 import { GameService } from '../services/game.service';
 import { Router } from '@angular/router';
-
+import { Observable } from 'rxjs/Observable';
+import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -81,4 +82,9 @@ export class GameComponent implements OnInit {
 //   ChosenQuote = () => this.Model.PlayedQuotes.find( x => x.Chosen );
 //   IsEveryoneDone = () => this.Model.PlayedQuotes.length == this.Model.Players.length - 1;
 //   IAmTheDealer = () => this.Me.Name == this.Model.DealerId;
+
+search =(text: Observable<string>)=>
+  text.pipe(
+    map(x=>[x])
+  )
 }

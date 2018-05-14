@@ -41,6 +41,8 @@ import { ExampleComponent } from './example/example.component';
   imports: [
     BrowserModule,
     HttpModule,
+    NgbModule.forRooot(),
+    FormsModule,
     RouterModule.forRoot([
         { path: 'home', component: HomeComponent },
         { path: 'game', component: GameComponent },

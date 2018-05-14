@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule }    from '@angular/forms';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import { FormComponent } from './form/form.component';
 import { SuccessComponent } from './success/success.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExampleComponent } from './example/example.component';
+import { TypeaheadComponent } from './typeahead/typeahead.component';
+
+// import {TypeAheadModule} from '../src/typeahead.module';
 
 
 
@@ -40,11 +44,13 @@ import { ExampleComponent } from './example/example.component';
     SuccessComponent,
     ProfileComponent,
     ExampleComponent,
+    TypeaheadComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    NgbModule,
+    // NgbModule
+    // TypeAheadModule,
     FormsModule,
     RouterModule.forRoot([
         { path: 'home', component: HomeComponent },
@@ -63,4 +69,6 @@ import { ExampleComponent } from './example/example.component';
   providers: [MessagesService, GameService],
   bootstrap: [AppComponent]
 })
+export class AutoCompleteExampleModule { }
+
 export class AppModule { }

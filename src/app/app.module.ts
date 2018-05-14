@@ -16,6 +16,7 @@ import { DietComponent } from './diet/diet.component';
 import { TryComponent } from './try/try.component';
 import { FormComponent } from './form/form.component';
 import { SuccessComponent } from './success/success.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -33,6 +34,7 @@ import { SuccessComponent } from './success/success.component';
     TryComponent,
     FormComponent,
     SuccessComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { SuccessComponent } from './success/success.component';
         { path: 'try', component:TryComponent},
         { path: 'form', component:FormComponent},
         {path: 'success', component:SuccessComponent},
+        {path: 'profile', component:ProfileComponent},
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],

@@ -17,6 +17,7 @@ import { TryComponent } from './try/try.component';
 import { FormComponent } from './form/form.component';
 import { SuccessComponent } from './success/success.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ExampleComponent } from './example/example.component';
 
 
 
@@ -35,6 +36,7 @@ import { ProfileComponent } from './profile/profile.component';
     FormComponent,
     SuccessComponent,
     ProfileComponent,
+    ExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,7 @@ import { ProfileComponent } from './profile/profile.component';
         { path: 'form', component:FormComponent},
         {path: 'success', component:SuccessComponent},
         {path: 'profile', component:ProfileComponent},
+        {path: 'example', component:ExampleComponent},
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],

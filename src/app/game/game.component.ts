@@ -83,8 +83,4 @@ export class GameComponent implements OnInit {
 //   IsEveryoneDone = () => this.Model.PlayedQuotes.length == this.Model.Players.length - 1;
 //   IAmTheDealer = () => this.Me.Name == this.Model.DealerId;
 
-search =(text: Observable<string>)=>
-  text.pipe(
-    map(x=>[x])
-  )
 }

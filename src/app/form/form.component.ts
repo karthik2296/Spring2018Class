@@ -7,5 +7,5 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FormComponent {
-  log(y) { console.log(y); }
+  // log(y) { console.log(y); }
 }

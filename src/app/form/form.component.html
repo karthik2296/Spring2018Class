@@ -1,13 +1,35 @@
-<form>
+<!-- <form>
   <div class="form">
 
       <label for="firstName">First Name</label>
-      <input ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form">
+      <input      id="firstName" type="text" class="form">
   </div>
   
   <div class="form">
-    <label for="comment"></label>
+    <label for="comment">Comment</label>
     <textarea id="comment" cols="30" rows="10" class="form">Comment</textarea>
   </div>
-  <button class="btn btn-primary">Submit</button>
-</form>
+  <a href="/success" button class="btn btn-primary" >Submit</a>
+</form> -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php" id="form1">
+  
+    First name: <input type="text" name="fname"><br><br>
+
+    Last name: <input type="text" name="lname" form="form1"><br><br>
+
+    Phone Number:<input type="number" name="phonenumber" form="form1"><br><br>
+
+    FeedBack:<br><textarea id="comment" cols="30" rows="3" class="form1"></textarea>
+
+  
+
+    <a href="/success" button class="btn btn-primary" >Submit</a>
+  </form>
+</body>
+</html>

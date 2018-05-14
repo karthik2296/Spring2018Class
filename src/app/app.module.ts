@@ -15,6 +15,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DietComponent } from './diet/diet.component';
 import { TryComponent } from './try/try.component';
 import { FormComponent } from './form/form.component';
+import { SuccessComponent } from './success/success.component';
 
 
 
@@ -31,6 +32,7 @@ import { FormComponent } from './form/form.component';
     DietComponent,
     TryComponent,
     FormComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,8 @@ import { FormComponent } from './form/form.component';
         { path: 'bmi', component: BmiComponent },
         { path: 'diet', component:DietComponent},
         { path: 'try', component:TryComponent},
+        { path: 'form', component:FormComponent},
+        {path: 'success', component:SuccessComponent},
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],
